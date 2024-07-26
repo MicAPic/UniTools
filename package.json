@@ -14,5 +14,8 @@
     "name": "MicAPic",
     "email": "micha.pavlov@gmail.com",
     "url": "https://github.com/MicAPic/UniTools"
+  },
+  "dependencies": {
+    "com.unity.textmeshpro": "1.0.23"
   }
 }

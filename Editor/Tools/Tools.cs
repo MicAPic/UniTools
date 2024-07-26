@@ -2,7 +2,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace UniTools.Editor
+namespace UniTools.Editor.Tools
 {
     public static class Tools
     {

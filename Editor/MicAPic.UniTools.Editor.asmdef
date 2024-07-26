@@ -1,7 +1,7 @@
 {
     "name": "MicAPic.UniTools.Editor",
     "rootNamespace": "UniTools",
-    "references": [],
+    "references": ["GUID:d661da4615fa46c787fc8de274223b62"],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

@@ -1,4 +1,4 @@
-﻿namespace Tanks
+﻿namespace UniTools.Extensions
 {
     public static class GenericExtensions
 	{

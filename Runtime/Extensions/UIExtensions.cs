@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace UniTools.Extensions
 {
-    public static class UIExtensions
+    public static partial class UIExtensions
     {
         public static void SetColor(this Graphic image, Color color)
         {

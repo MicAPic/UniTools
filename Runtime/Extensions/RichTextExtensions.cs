@@ -34,26 +34,22 @@ namespace UniTools.Extensions
             return WrapInTag(self, "sup", "sup");
         }
 
-        public static string Highlight(this string self, string xmlColor = "yellow", bool toBold = true)
+        public static string Highlight(this string self, string xmlColor = "yellow")
         {
-            return WrapInTag(toBold ? self.ToBold() : self, $"color={xmlColor}", "color");
+            return WrapInTag(self, $"color={xmlColor}", "color");
         }
-
-
-        public static string Highlight(this string self, Color color, bool toBold = true)
+        
+        public static string Highlight(this string self, Color color)
         {
-            return self.Highlight("#" + ColorUtility.ToHtmlStringRGB(color), toBold);
+            return self.Highlight("#" + ColorUtility.ToHtmlStringRGB(color));
         }
 
         private static string WrapInTag(string self, string openTag, string closeTag)
         {
-            if (string.IsNullOrEmpty(self))
-            {
-                Debug.LogWarning($"String is not defined. Can't wrap in tags: {openTag} - {closeTag}");
-                return self;
-            }
-
-            return $"<{openTag}>{self}</{closeTag}>";
+            if (string.IsNullOrEmpty(self) is false) return $"<{openTag}>{self}</{closeTag}>";
+            
+            Debug.LogWarning($"String is not defined. Can't wrap in tags: {openTag} - {closeTag}");
+            return self;
         }
     }
 }

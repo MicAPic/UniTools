@@ -49,6 +49,19 @@ namespace UniTools.Extensions
 
             return self;
         }
+        
+        public static IList<T> Shuffle<T>(this IList<T> self) 
+        {
+            var rand = new Random();
+
+            for (var i = 0; i < self.Count - 1; i++)
+            {
+                var j = rand.Next(i, self.Count);
+                (self[i], self[j]) = (self[j], self[i]);
+            }
+            
+            return self;
+        }
 
         public static T GetRandom<T>(this ICollection<T> self)
         {
@@ -140,10 +153,13 @@ namespace UniTools.Extensions
         {
             return index >= 0 && index < collection.Count;
         }
-        
-        public static bool InRange<T>(this int index, IReadOnlyList<T> collection)
+
+        public static IEnumerable<T> ToEnumerable<T>(this IEnumerator<T> e)
         {
-            return index >= 0 && index < collection.Count;
+            while (e.MoveNext())
+            {
+                yield return e.Current;
+            }
         }
     }
 }

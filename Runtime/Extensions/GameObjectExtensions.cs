@@ -38,13 +38,25 @@ namespace UniTools.Extensions
         {
             behaviour.enabled = isEnabled;
         }
-        
-        public static void DestroyChildren(this Transform self)
+
+        public static void DestroyChildren(this GameObject self)
         {
-            foreach (Transform item in self)
-            {
-                Object.Destroy(item.gameObject);
-            }
+            self.transform.DestroyChildren();
+        }
+
+        public static void DestroyChildrenImmediate(this GameObject self)
+        {
+            self.transform.DestroyChildrenImmediate();
+        }
+
+        public static void ShowChildren(this GameObject self)
+        {
+            self.transform.ShowChildren();
+        }
+
+        public static void HideChildren(this GameObject self)
+        {
+            self.transform.HideChildren();
         }
     }
 }

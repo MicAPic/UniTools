@@ -37,9 +37,7 @@ namespace UniTools.Collections
             foreach (var t in e) Add(t);
         }
 
-        //
         // ISet implementation
-        //
 
         public bool Add(T item)
         {
@@ -155,9 +153,7 @@ namespace UniTools.Collections
             foreach (var t in other) Add(t);
         }
 
-        //
         // ICollection<T> implementation
-        //
 
         public int Count => dict.Count;
 
@@ -193,22 +189,30 @@ namespace UniTools.Collections
             return true;
         }
 
-        //
         // IEnumerable<T> implementation
-        //
 
         public IEnumerator<T> GetEnumerator()
         {
             return list.GetEnumerator();
         }
 
-        //
         // IEnumerable implementation
-        //
 
         IEnumerator IEnumerable.GetEnumerator()
         {
             return list.GetEnumerator();
+        }
+        
+        // Etc.
+
+        public T First()
+        {
+            return list.First.Value;
+        }
+        
+        public T Last()
+        {
+            return list.Last.Value;
         }
     }
 }

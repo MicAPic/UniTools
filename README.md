@@ -24,5 +24,5 @@ UniTools is a comprehensive Unity package designed to streamline your developmen
 This project is licensed under the MIT License &mdash; see the [LICENSE](https://github.com/MicAPic/UniTools/blob/master/LICENSE.md) file for details. Some of the code in this project is taken from other users, with attribution.
 
 ## Versioning
-Current version: 0.3.1
+Current version: 0.3.2
 
